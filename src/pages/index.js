@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "gatsby-link";
 import backgroundVideo from "../videos/background.mp4";
 import groupimage from "../img/love-ds.jpg";
 import machine from "../img/machine.jpg";
@@ -15,6 +16,28 @@ import faInstagram from "@fortawesome/fontawesome-free-brands/faInstagram";
 import Map from "../components/Map";
 
 export default class IndexPage extends React.Component {
+
+  state = {
+    firstName: "",
+    lastName: "",
+    email: "",
+    message: ""
+  };
+
+  handleInputChange = (event) => {
+    const target = event.target;
+    const value = target.type === "checkbox" ? target.checked : target.value;
+    const name = target.name;
+
+    this.setState({
+      [name]: value
+    });
+  };
+
+  sendMessage = () => {
+    console.log("message sended");
+  };
+
   render() {
     return <div>
       {/* HEADER */}
@@ -59,9 +82,9 @@ export default class IndexPage extends React.Component {
               obcaecati ex et iure vero pariatur quas! Asperiores quam
               impedit quo modi ducimus quia, pariatur reprehenderit.
             </p>
-            <a className="btn btn-mirror">
+            <Link to="/hackathon" className="btn btn-mirror" exact={true}>
               <span>registrate</span>
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -200,8 +223,12 @@ export default class IndexPage extends React.Component {
                     <div className="field">
                       <label className="label">Nombre</label>
                       <div className="control">
-                        <input className="input" type="text" placeholder="Text input"
-                               value="test@test.com"/>
+                        <input className="input"
+                               type="text"
+                               placeholder="Nombre"
+                               name="firstName"
+                               onChange={this.handleInputChange}
+                               value={this.state.firstName}/>
                       </div>
                     </div>
                   </div>
@@ -209,7 +236,12 @@ export default class IndexPage extends React.Component {
                     <div className="field">
                       <label className="label">Apellido</label>
                       <div className="control">
-                        <input className="input" type="text" placeholder="Text input"/>
+                        <input className="input"
+                               type="text"
+                               placeholder="Apellidos"
+                               name="lastName"
+                               onChange={this.handleInputChange}
+                               value={this.state.lastName}/>
                       </div>
                     </div>
                   </div>
@@ -219,8 +251,12 @@ export default class IndexPage extends React.Component {
                     <div className="field">
                       <label className="label">Email</label>
                       <div className="control">
-                        <input className="input is-danger" type="email"
-                               placeholder="Email input"/>
+                        <input className="input is-danger"
+                               type="email"
+                               placeholder="Email"
+                               name="email"
+                               onChange={this.handleInputChange}
+                               value={this.state.email}/>
                       </div>
                     </div>
                   </div>
@@ -230,7 +266,11 @@ export default class IndexPage extends React.Component {
                     <div className="field">
                       <label className="label">Message</label>
                       <div className="control">
-                        <textarea className="textarea" placeholder="Textarea"/>
+                        <textarea className="textarea"
+                                  placeholder="Mensaje"
+                                  name="message"
+                                  onChange={this.handleInputChange}
+                                  value={this.state.message}/>
                       </div>
                     </div>
                   </div>
@@ -239,7 +279,7 @@ export default class IndexPage extends React.Component {
                   <div className="column">
                     <div className="field is-grouped">
                       <div className="control">
-                        <button className="button is-link">Submit</button>
+                        <button className="button is-link" onClick={this.sendMessage}>Submit</button>
                       </div>
                     </div>
                   </div>
