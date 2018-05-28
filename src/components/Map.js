@@ -10,11 +10,6 @@ import {
 
 const Map = compose(
     withProps({
-        /**
-         * Note: create and replace your own key in the Google console.
-         * https://console.developers.google.com/apis/dashboard
-         * The key "AIzaSyBkNaAGLEVq0YLQMi-PYEMabFeREadYe1Q" can be ONLY used in this sandbox (no forked).
-         */
         googleMapURL:
             "https://maps.googleapis.com/maps/api/js?key=AIzaSyAyesbQMyKVVbBgKVi2g6VX7mop2z96jBo&v=3.exp&libraries=geometry,drawing,places",
         loadingElement: <div style={{ height: `100%` }}/>,
