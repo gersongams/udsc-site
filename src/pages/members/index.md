@@ -2,23 +2,26 @@
 templateKey: member-page
 members:
   member:
-    - name: George Prado
+    - charge: president
       image: /img/coffee.png
-      charge: president
-    - name: Erick ALV
+      name: George Prado
+    - charge: president
       image: /img/coffee.png
-      charge: president
-    - name: Franz Maguiña
+      name: Erick ALV
+    - charge: president
       image: /img/coffee.png
-      charge: president
-    - name: Miguel Quispe
+      name: Franz Maguiña
+    - charge: president
       image: /img/coffee.png
-      charge: president
-    - name: Julito Mini
+      name: Miguel Quispe
+    - charge: president
       image: /img/coffee.png
-      charge: president
-    - name: Leito Cotaquispe
+      name: Julito Mini
+    - charge: president
       image: /img/coffee.png
-      charge: president
+      name: Leito Cotaquispe
+    - charge: GGGGGGGG
+      image: /img/chemex.jpg
+      name: DDDDDDd
 ---
 
