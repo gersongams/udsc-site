@@ -41,7 +41,7 @@ const Navbar = () => (
               Más
             </NavLink>
             <div className="navbar-dropdown is-boxed">
-              <NavLink className="navbar-item" activeClassName="selected-subitem" to="/"
+              <NavLink className="navbar-item" activeClassName="selected-subitem" to="/gallery"
                        exact={true}>
                 Galería
               </NavLink>

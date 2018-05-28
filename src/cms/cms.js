@@ -8,6 +8,7 @@ import WorkshopPagePreview from "./preview-templates/WorkshopPagePreview";
 import ProjectPagePreview from "./preview-templates/ProjectPagePreview";
 import HackathonPagePreview from "./preview-templates/HackathonPagePreview";
 import MemberPagePreview from "./preview-templates/MemberPagePreview";
+import GalleryPagePreview from "./preview-templates/GalleryPagePreview";
 
 CMS.registerPreviewStyle("/styles.css");
 CMS.registerPreviewTemplate("about", AboutPagePreview);
@@ -18,3 +19,4 @@ CMS.registerPreviewTemplate("workshops", WorkshopPagePreview);
 CMS.registerPreviewTemplate("projects", ProjectPagePreview);
 CMS.registerPreviewTemplate("hackathon", HackathonPagePreview);
 CMS.registerPreviewTemplate("members", MemberPagePreview);
+CMS.registerPreviewTemplate("gallery", GalleryPagePreview);
