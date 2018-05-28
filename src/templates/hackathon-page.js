@@ -60,7 +60,7 @@ export const HackathonPageTemplate = ({
         <section className="info-hackathon flex-centered">
             <div className="container flex-centered">
                 <div className="columns">
-                    <div className="column is-12-mobile is-4-tablet is-4-desktop">
+                    <div className="column is-6-mobile is-4-tablet is-4-desktop">
                         <FontAwesomeIcon icon={faGraduationCap}/>
                         <div className="content">
                             <h4>¿A quíén va dirigido?</h4>
@@ -69,7 +69,7 @@ export const HackathonPageTemplate = ({
                             </p>
                         </div>
                     </div>
-                    <div className="column is-12-mobile is-4-tablet is-4-desktop">
+                    <div className="column is-6-mobile is-4-tablet is-4-desktop">
                         <FontAwesomeIcon icon={faCalendarAlt}/>
                         <div className="content">
                             <h4>¿Cuándo?</h4>
@@ -78,7 +78,7 @@ export const HackathonPageTemplate = ({
                             </p>
                         </div>
                     </div>
-                    <div className="column is-12-mobile is-4-tablet is-4-desktop">
+                    <div className="column is-6-mobile is-4-tablet is-4-desktop">
                         <FontAwesomeIcon icon={faMapMarker}/>
                         <div className="content">
                             <h4>¿Donde?</h4>

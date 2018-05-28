@@ -77,4 +77,4 @@ collections:
         name: "members"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "member-page"}
-          - {label: Members, name: members, widget: object, fields: [{label: Member, name: member, widget: list, fields:[{label: Image,name: image, widget: image}, {label: Name, name: name, widget: string},{label: Charge, name: charge, widget: string}]}]}
+          - {label: Members, name: members, widget: object, fields: [{label: Member, name: member, widget: list, fields:[{label: Image,name: image, widget: image}, {label: Name, name: name, widget: string}, {label: Charge, name: charge, widget: string}, {label: gitLink, name: gitLink, widget: string}, {label: linkedInLink, name: linkedInLink, widget: string}]}]}

@@ -38,8 +38,12 @@ export const MemberPageTemplate = ({
                                         <div className="content">
                                             <p>{member.charge}</p>
                                             <div>
+                                              <a href={member.gitLink}>
                                                 <FontAwesomeIcon icon={faGithubSquare}/>
+                                              </a>
+                                              <a href={member.linkedInLink}>
                                                 <FontAwesomeIcon icon={faLinkedin}/>
+                                              </a>
                                             </div>
                                         </div>
                                     </div>
@@ -88,6 +92,8 @@ export const memberPageQuery = graphql`
             image
             name
             charge
+            linkedInLink
+            gitLink
           }
         }       
       }
