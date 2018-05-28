@@ -18,7 +18,6 @@ collections:
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list"}
-
   - name: "pages"
     label: "Pages"
     files:
@@ -29,7 +28,7 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
-      - file: "src/pages/products/index.md"
+      - file: "src/pages/products/index.md"x
         label: "Products Page"
         name: "products"
         fields:
@@ -43,3 +42,39 @@ collections:
           - {label: Testimonials, name: testimonials, widget: list, fields: [{label: Quote, name: quote, widget: string}, {label: Author, name: author, widget: string}]}
           - {label: Full_image, name: full_image, widget: image}
           - {label: Pricing, name: pricing, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: string}, {label: Plans, name: plans, widget: list, fields: [{label: Plan, name: plan, widget: string}, {label: Price, name: price, widget: string}, {label: Description, name: description, widget: string}, {label: Items, name: items, widget: list}]}]}
+      - file: "src/pages/workshops/index.md"
+        label: "Workshops Page"
+        name: "workshops"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "workshops-page"}
+          - {label: Workshops, name: workshops, widget: object, fields: [{label: Workshop, name: workshop, widget: list, fields:[{label: Image,name: image, widget: image}, {label: Title, name: title, widget: string},{label: Description, name: description, widget: text},{label: When, name: when, widget: "datetime"},{label: Place, name: place, widget: string },{label: "Register Link", name: "registerLink", widget: string}]}]}
+      - file: "src/pages/projects/index.md"
+        label: "Projects Page"
+        name: "projects"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "project-page"}
+          - {label: Projects, name: projects, widget: object, fields: [{label: Project, name: project, widget: list, fields:[{label: Image,name: image, widget: image}, {label: Title, name: title, widget: string},{label: Description, name: description, widget: text},{label: Author, name: author, widget: string },{label: "Link", name: "link", widget: string}]}]}
+      - file: "src/pages/hackathon/index.md"
+        label: "Hackathon Page"
+        name: "hackathon"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "hackathon-page"}
+          - {label: Title, name: title, widget: string}
+          - {label: Subtitle, name: subtitle, widget: string}
+          - {label: "Hackathon Date", name: hackathondate, widget: string}
+          - {label: "Register Link", name: registerLink, widget: string}
+          - {label: "About Hackathon", name: abouthackathon, widget: object, fields: [{label: title, name: title, widget: string}, {label: description, name: description, widget: text}]}
+          - {label: "Info Hackathon", name: infohackathon, widget: object, fields: [{label: "Who is for", name: who, widget: text}, {label: "When", name: when, widget: text}, {label: "Where", name: where, widget: text}, {label: "Link Where", name: linkWhere, widget: string}]}
+          - {label: "Challenge Hackathon", name: challenge, widget: object, fields: [{label: title, name: title, widget: string}, {label: description, name: description, widget: text}]}
+          - {label: FirstPlace, name: firstplace, widget: list, fields: [{label: Price, name: price, widget: string}]}
+          - {label: SecondPlace, name: secondplace, widget: list, fields: [{label: Price, name: price, widget: string}]}
+          - {label: ThirdPlace, name: thirdplace, widget: list, fields: [{label: Price, name: price, widget: string}]}
+          - {label: Rules, name: rules, widget: list, fields: [{label: Rule, name: rule, widget: text}]}
+          - {label: Speakers, name: speakers, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Name, name: name, widget: string}, {label: Description, name: description, widget: text}]}
+          - {label: Sponsors, name: sponsors, widget: list, fields: [{label: Image, name: image, widget: image}]}
+      - file: "src/pages/members/index.md"
+        label: "Members Page"
+        name: "members"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "member-page"}
+          - {label: Members, name: members, widget: object, fields: [{label: Member, name: member, widget: list, fields:[{label: Image,name: image, widget: image}, {label: Name, name: name, widget: string},{label: Charge, name: charge, widget: string}]} ]}

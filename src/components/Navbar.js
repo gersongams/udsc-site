@@ -1,41 +1,60 @@
-import React from 'react'
-import Link from 'gatsby-link'
+import React from "react";
+import Link from "gatsby-link";
+import NavLink from "gatsby-link";
 
-import github from '../img/github-icon.svg'
-import logo from '../img/logo.svg'
+const hamburgerToggler = () => {
+  let toggle = document.querySelector(".navbar-burger");
+  let menu = document.querySelector(".navbar-menu");
+  toggle.classList.toggle("is-active");
+  menu.classList.toggle("is-active");
+};
 
 const Navbar = () => (
-  <nav className="navbar is-transparent">
+  <nav className="navbar is-fixed-top">
     <div className="container">
       <div className="navbar-brand">
-        <Link to="/" className="navbar-item">
-          <figure className="image">
-            <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
-          </figure>
+        <Link to="/" className="navbar-item logo-link" exact={true}>
+          <h3 className="logo">UDSC</h3>
         </Link>
+        <div className="navbar-burger burger" data-target="navbarTogglerBurger" onClick={hamburgerToggler}>
+          <span/>
+          <span/>
+          <span/>
+        </div>
       </div>
-      <div className="navbar-start">
-        <Link className="navbar-item" to="/about">
-          About
-        </Link>
-        <Link className="navbar-item" to="/products">
-          Products
-        </Link>
-      </div>
-      <div className="navbar-end">
-        <a
-          className="navbar-item"
-          href="https://github.com/AustinGreen/gatsby-netlify-cms-boilerplate"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <span className="icon">
-            <img src={github} alt="Github" />
-          </span>
-        </a>
+      <div id="navbarTogglerBurger" className="navbar-menu">
+        <div className="navbar-end">
+          <NavLink className="navbar-item" activeClassName="selected" to="/hackathon" exact={true}>
+            Eventos
+          </NavLink>
+          <NavLink className="navbar-item" activeClassName="selected" to="/workshops" exact={true}>
+            Workshops
+          </NavLink>
+          <NavLink className="navbar-item" activeClassName="selected" to="/blog" exact={true}>
+            Blog
+          </NavLink>
+          <NavLink className="navbar-item" activeClassName="selected" to="/projects" exact={true}>
+            Proyectos
+          </NavLink>
+          <div className="navbar-item has-dropdown is-hoverable">
+            <NavLink className="navbar-link" to="/">
+              Más
+            </NavLink>
+            <div className="navbar-dropdown is-boxed">
+              <NavLink className="navbar-item" activeClassName="selected-subitem" to="/"
+                       exact={true}>
+                Galería
+              </NavLink>
+              <NavLink className="navbar-item" activeClassName="selected-subitem" to="/members"
+                       exact={true}>
+                Miembros
+              </NavLink>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </nav>
-)
+);
 
-export default Navbar
+export default Navbar;
