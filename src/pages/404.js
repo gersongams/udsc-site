@@ -1,9 +1,13 @@
 import React from "react";
+import sad from "../img/sad.png"
 
 const NotFoundPage = () => (
-  <div>
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+  <div className="error">
+    <h1>La página a la que quieres acceder no existe.</h1>
+      <figure className="image is-square">
+          <img src={sad}
+               alt="sad python"/>
+      </figure>
   </div>
 );
 

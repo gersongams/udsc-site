@@ -9,7 +9,7 @@ import Footer from "../components/Footer";
 const TemplateWrapper = ({ children }) => (
     <div>
         <Helmet>
-            <html lang="es"/>
+            <html lang="es"/>x|
             <meta charSet="utf-8"/>
             <meta http-equiv="x-ua-compatible"
                   content="ie=edge"/>
